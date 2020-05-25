@@ -38,7 +38,7 @@ public class NewUser extends JFrame{
 
                 if (ageTextField.getText().matches("[0-9]+")) {
 
-                    if (Methods.AddUser(userNameTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), genderTextField.getText().charAt(0), Integer.valueOf(ageTextField.getText()))) {
+                    if (Methods.AddUser(userNameTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), genderTextField.getText().charAt(0), Integer.parseInt(ageTextField.getText()))) {
                         updateLabel.setForeground(Color.black);
                         updateLabel.setText("User " + userNameTextField.getText() + " has been added to the database.");
 

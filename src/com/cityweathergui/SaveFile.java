@@ -3,6 +3,7 @@ package com.cityweathergui;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
 public class SaveFile {
 
@@ -14,21 +15,14 @@ public class SaveFile {
 
         for (int i = 0; i < MainMenu.userDatabase.length; i++) {
 
-            if (MainMenu.userDatabase[i].getGender() > -1) {
+            if (MainMenu.userDatabase[i].getAge() > -1) {
 
                 dataOut.println(MainMenu.userDatabase[i].getUserName());
                 dataOut.println(MainMenu.userDatabase[i].getFirstName());
                 dataOut.println(MainMenu.userDatabase[i].getLastName());
                 dataOut.println(MainMenu.userDatabase[i].getAge());
                 dataOut.println(MainMenu.userDatabase[i].getGender());
-
-                int scores [] = MainMenu.userDatabase[i].getScores();
-
-                for (int j = 0; j < scores.length; j++) {
-
-                    scores[i] = -1;
-
-                }
+                dataOut.println(Arrays.toString(MainMenu.userDatabase[i].getScores()));
 
             } else
                 break;
