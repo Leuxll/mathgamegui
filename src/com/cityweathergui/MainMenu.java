@@ -12,6 +12,7 @@ public class MainMenu extends JFrame{
     private JPanel mainMenuPanel;
     private JButton newUserButton;
     private JButton existingUserButton;
+    private JButton exitButton;
 
     public MainMenu(String title) {
 
@@ -38,6 +39,17 @@ public class MainMenu extends JFrame{
             }
         });
 
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    SaveFile.SaveData();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+                System.exit(0);
+            }
+        });
     }
 
     public static void main(String[] args) throws IOException {

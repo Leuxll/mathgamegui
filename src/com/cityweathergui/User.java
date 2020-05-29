@@ -16,7 +16,7 @@ public class User {
         lastName = "-";
         gender = '-';
         age = -1;
-        scores = new int[10] ;
+        scores = new int[15];
 
     }
 

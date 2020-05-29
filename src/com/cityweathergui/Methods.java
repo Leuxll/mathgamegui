@@ -47,11 +47,13 @@ public class Methods {
 
             if (MainMenu.userDatabase[i].getUserName().equals("-") == false){
 
+                String gender = String.valueOf(MainMenu.userDatabase[i].getGender());
+
                 HTMLString += "<tr>";
                 HTMLString += "<td>" + MainMenu.userDatabase[i].getUserName() + "</td>";
                 HTMLString += "<td>" + MainMenu.userDatabase[i].getFirstName() + "</td>";
                 HTMLString += "<td>" + MainMenu.userDatabase[i].getLastName() + "</td>";
-                HTMLString += "<td>" + String.valueOf(MainMenu.userDatabase[i].getGender()) + "</td>";
+                HTMLString += "<td>" + gender + "</td>";
                 HTMLString += "<td>" + MainMenu.userDatabase[i].getAge() + "</td>";
                 HTMLString += "<td>" + Arrays.toString(MainMenu.userDatabase[i].getScores()) + "</td>";
                 HTMLString += "</tr>";

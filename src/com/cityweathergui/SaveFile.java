@@ -22,7 +22,25 @@ public class SaveFile {
                 dataOut.println(MainMenu.userDatabase[i].getLastName());
                 dataOut.println(MainMenu.userDatabase[i].getAge());
                 dataOut.println(MainMenu.userDatabase[i].getGender());
-                dataOut.println(Arrays.toString(MainMenu.userDatabase[i].getScores()));
+
+                int scores[] = MainMenu.userDatabase[i].getScores();
+
+                String tempString = "";
+
+                for (int j = 0; j < scores.length; j++) {
+
+                    if (j < scores.length - 1) {
+
+                        tempString += scores[j] + ",";
+
+                    } else {
+
+                        tempString += scores[j];
+
+                    }
+
+                }
+                dataOut.println(tempString);
 
             } else
                 break;

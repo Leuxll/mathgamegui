@@ -1,6 +1,10 @@
 package com.cityweathergui;
 
+import com.sun.tools.javac.Main;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class ExistingUser extends JFrame{
@@ -20,11 +24,18 @@ public class ExistingUser extends JFrame{
         editorPane1.setEnabled(false);
         editorPane1.setContentType("text/html");
         try {
-            editorPane1.setText(DisplayMethod.CreateHTMLTable());
+            editorPane1.setText(Methods.CreateHTMLTable());
         } catch (IOException e) {
             System.out.println("Can not load file");
         }
 
+        mainMenuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainMenu obj = new MainMenu("Main Menu");
+                dispose();
+            }
+        });
     }
 
     public static void main(String[] args) {

@@ -3,6 +3,9 @@ package com.cityweathergui;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
+
+import static java.lang.Integer.parseInt;
 
 public class LoadData {
 
@@ -27,8 +30,8 @@ public class LoadData {
             String userName = dataIn.readLine();
             String firstName = dataIn.readLine();
             String lasName = dataIn.readLine();
-            char gender = dataIn.readLine().charAt(0);
             int age = Integer.parseInt(dataIn.readLine());
+            char gender = dataIn.readLine().charAt(0);
             String tempScores = dataIn.readLine();
             String[] tempScoresArray = tempScores.split(",");
             int[] scores = new int[tempScoresArray.length];
